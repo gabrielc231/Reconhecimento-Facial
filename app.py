@@ -2,7 +2,6 @@ import streamlit as st
 import tensorflow as tf
 from keras import models
 import numpy as np
-import cv2
 from PIL import Image
 
 st.set_page_config(page_title="Reconhecimento de Emoções Faciais", layout="centered")
