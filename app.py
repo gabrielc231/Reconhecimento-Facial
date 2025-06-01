@@ -9,7 +9,7 @@ st.set_page_config(page_title="Reconhecimento de Emoções Faciais", layout="cen
 
 # === 1. Carregar o modelo ===
 @st.cache_resource
-def load_model(path="models/model6.h5"):
+def load_model(path="models/best_model.h5"):
     return models.load_model(path)
 
 model = load_model()
