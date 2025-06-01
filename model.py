@@ -24,7 +24,7 @@ train_dir = 'data/train'
 val_dir = 'data/test'
 
 # Caminho para salvar o modelo
-save_path = "models/model6.h5"
+save_path = "models/model.h5"
 
 # Data augmentation
 datagen = ImageDataGenerator(
@@ -44,7 +44,7 @@ train_data = datagen.flow_from_directory(
     color_mode='grayscale',
     class_mode='categorical',
     classes=classes_usadas,
-    batch_size=32,
+    batch_size=128,
     shuffle=True
 )
 
@@ -54,7 +54,7 @@ val_data = datagen.flow_from_directory(
     color_mode='grayscale',
     class_mode='categorical',
     classes=classes_usadas,
-    batch_size=32,
+    batch_size=128,
     shuffle=False
 )
 
