@@ -29,8 +29,11 @@ Ele é executável e contém explicações passo a passo do processo.
 
 ## Aplicação Streamlit para Consumo do Modelo
 
-Uma aplicação web simples foi criada com Streamlit para permitir que você faça upload de uma imagem e veja qual emoção o modelo reconhece nela.  
-Execute o app localmente com:
+Uma aplicação web simples foi criada com Streamlit para permitir que você faça upload de uma imagem e veja qual emoção o modelo reconhece nela.
+
+Utilize o modelo pelo aplicativo online Streamlit [neste link](https://face-recognit.streamlit.app)
+
+Ou execute o app localmente com:
 
 ```bash
 streamlit run app.py
