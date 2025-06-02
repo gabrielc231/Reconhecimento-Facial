@@ -45,7 +45,7 @@ O código do app está disponível [aqui](./app.py).
 
 ## Texto / Artigo do Projeto
 
-Um artigo explicativo descrevendo as motivações, arquitetura da rede, dataset utilizado, resultados e possíveis melhorias está disponível [neste arquivo PDF](./docs/artigo_facial_expression_recognition.pdf).
+Um artigo explicativo descrevendo as motivações, arquitetura da rede, dataset utilizado, resultados e possíveis melhorias está disponível [neste arquivo PDF](./Artigo Projeto Reconhecimento de Expressões Faciais).
 
 ---
 
