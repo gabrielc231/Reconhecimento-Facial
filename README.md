@@ -22,7 +22,7 @@ Este projeto desenvolve uma rede neural convolucional (CNN) usando TensorFlow e 
 
 ## Código Completo e Executável (Notebook Python)
 
-Você pode encontrar o notebook Python com todo o código para treinamento, avaliação e teste do modelo [neste link](./notebooks/facial_expression_recognition.ipynb).  
+Você pode encontrar o notebook Python com todo o código para treinamento, avaliação e teste do modelo [neste link](./Projeto_semestral_reconhecimento_facial.ipynb).  
 Ele é executável e contém explicações passo a passo do processo.
 
 ---
