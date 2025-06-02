@@ -53,7 +53,7 @@ Um artigo explicativo descrevendo as motivações, arquitetura da rede, dataset 
 
 Confira uma rápida apresentação do projeto no YouTube:
 
-[![Vídeo de Apresentação](https://img.youtube.com/vi/watch?v=gaT232dErr0/maxresdefault.jpg)](https://www.youtube.com/watch?v=gaT232dErr0)
+[![Vídeo de Apresentação](https://img.youtube.com/vi/gaT232dErr0/maxresdefault.jpg)](https://www.youtube.com/watch?v=gaT232dErr0)
 
 [Link direto para o vídeo](https://www.youtube.com/watch?v=gaT232dErr0)
 
