@@ -5,6 +5,7 @@ from keras.layers import Conv2D, MaxPooling2D, Dropout, Flatten, Dense, BatchNor
 from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import EarlyStopping, ModelCheckpoint
 import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import numpy as np
 import os
 
@@ -121,15 +122,49 @@ history = model.fit(
 # === Salvar Modelo ===
 model.save("models/final_model.h5")
 
-# === Avaliação ===
+# === Avaliação final ===
 loss, acc = model.evaluate(val_data)
 print(f"Acurácia em validação: {acc:.2f}")
 
-# === Gráfico ===
-plt.plot(history.history['accuracy'], label='Treino')
+# === Gráficos de desempenho ===
+plt.figure(figsize=(12, 5))
+
+# Acurácia por época
+plt.subplot(1, 2, 1)
+plt.plot(history.history['accuracy'], label='Treinamento')
 plt.plot(history.history['val_accuracy'], label='Validação')
-plt.legend()
-plt.xlabel('Época')
+plt.title('Acurácia por época')
+plt.xlabel('Épocas')
 plt.ylabel('Acurácia')
-plt.title('Desempenho da CNN')
+plt.legend()
+plt.grid(True)
+
+# Perda por época
+plt.subplot(1, 2, 2)
+plt.plot(history.history['loss'], label='Treinamento')
+plt.plot(history.history['val_loss'], label='Validação')
+plt.title('Perda (Loss) por época')
+plt.xlabel('Épocas')
+plt.ylabel('Loss')
+plt.legend()
+plt.grid(True)
+
+plt.tight_layout()
+plt.show()
+
+# === Matriz de Confusão ===
+
+# Rótulos verdadeiros e previstos
+y_true = val_data.classes
+y_pred_probs = model.predict(val_data)
+y_pred = np.argmax(y_pred_probs, axis=1)
+
+# Geração e exibição da matriz
+cm = confusion_matrix(y_true, y_pred)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=classes_usadas)
+
+plt.figure(figsize=(6, 6))
+disp.plot(cmap='Blues', values_format='d')
+plt.title("Matriz de Confusão - Validação")
+plt.grid(False)
 plt.show()
